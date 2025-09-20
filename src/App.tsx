@@ -68,28 +68,28 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
       type: 'Text → Image',
       description: 'Turn words into visuals',
       icon: <Image className="w-8 h-8" />,
-      image: 'src/assets/bytedance-seedream-v4-text-to-image.png'
+      image: '/assets/bytedance-seedream-v4-text-to-image.png'
     },
     {
       name: 'SeeDream v4 Edit',
       type: 'Image → Image', 
       description: 'Transform visuals instantly',
       icon: <Edit className="w-8 h-8" />,
-      image: 'src/assets/bytedance-seedream-v4-edit.png'
+      image: '/assets/bytedance-seedream-v4-edit.png'
     },
     {
       name: 'SeeDance v1 Pro',
       type: 'Text → Video',
       description: 'Bring imagination to motion',
       icon: <Video className="w-8 h-8" />,
-      image: 'src/assets/bytedance-seedance-v1-pro-text-to-video.png'
+      image: '/assets/bytedance-seedance-v1-pro-text-to-video.png'
     },
     {
       name: 'SeeDance v1 Lite',
       type: 'Image → Video',
       description: 'Bring your stills to life',
       icon: <Play className="w-8 h-8" />,
-      image: 'src/assets/bytedance-seedance-v1-lite-image-to-video.png'
+      image: '/assets/bytedance-seedance-v1-lite-image-to-video.png'
     }
   ];
 
@@ -100,7 +100,7 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
         {/* Header Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="src/assets/80015.jpg" 
+            src="/assets/80015.jpg" 
             alt="Header Background"
             className="w-full h-full object-cover opacity-60"
           />
@@ -112,7 +112,7 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded flex items-center justify-center">
-                <img src='src/assets/logo.png' className=''/>
+                <img src='/assets/logo.png' className=''/>
               </div>
               <span className="text-xl font-bold">Pixazo</span>
             </div>
@@ -307,7 +307,7 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
         {/* Footer Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="src/assets/82377.jpg" 
+            src="assets/82377.jpg" 
             alt="Footer Background"
             className="w-full h-full object-cover opacity-60"
           />
