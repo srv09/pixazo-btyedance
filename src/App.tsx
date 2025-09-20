@@ -98,15 +98,15 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
     <div className="min-h-screen bg-black text-white">
       {/* Header Section with Hero Image */}
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-  {/* Header Background Image */}
-  <div className="absolute inset-0">
-    <img 
-      src="/assets/80015.jpg" 
-      alt="Header Background"
-      className="w-full h-full object-cover opacity-60"
-    />
-    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-  </div>
+      {/* Header Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/assets/80015.jpg" 
+          alt="Header Background"
+          className="w-full h-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      </div>
   
   {/* Navigation Bar */}
   <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 py-4">
@@ -125,11 +125,14 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
   </nav>
 
   {/* Hero Content */}
-  <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 mt-6 sm:mt-4">
-    <div className="inline-flex items-center space-x-2 bg-orange-500 px-3 sm:px-4 py-2 rounded-full mb-6 sm:mb-8">
-      <Star className="w-4 h-4" />
-      <span className="text-xs sm:text-sm font-medium">Limited Time Offer</span>
-    </div>
+  <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32 lg:pt-40">
+  <div className="inline-flex items-center justify-center flex-wrap space-x-1 sm:space-x-2 bg-orange-500 
+                px-2 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 max-w-[90%] mx-auto">
+    <Star className="w-3 sm:w-4 h-3 sm:h-4" />
+    <span className="text-xs sm:text-sm font-medium text-center leading-tight">
+      Limited Time Offer
+    </span>
+  </div>
 
     <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
       <span className="text-white">FREE Unlimited</span>
@@ -174,7 +177,7 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
       </div>
     </div>
   </div>
-</section>
+    </section>
 
       {/* Steps Section - Ahrefs Style Vertical Layout */}
       <section className="py-24 bg-gray-900">
