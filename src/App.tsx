@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Users, ArrowRight, Play, Image, Video, Edit, ChevronRight, Clock, Star, Zap, LogIn, Search, Sparkles } from 'lucide-react';
+import { FilloutStandardEmbed } from '@fillout/react';
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -96,78 +97,84 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header Section with Hero Image */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Header Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            src="/assets/80015.jpg" 
-            alt="Header Background"
-            className="w-full h-full object-cover opacity-60"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  {/* Header Background Image */}
+  <div className="absolute inset-0">
+    <img 
+      src="/assets/80015.jpg" 
+      alt="Header Background"
+      className="w-full h-full object-cover opacity-60"
+    />
+    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+  </div>
+  
+  {/* Navigation Bar */}
+  <nav className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 py-4">
+    <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="flex items-center space-x-2">
+        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded flex items-center justify-center">
+          <img src='/assets/logo.png' alt="Pixazo Logo" />
         </div>
-        
-        {/* Navigation Bar - Ahrefs Style */}
-        <nav className="absolute top-0 left-0 right-0 z-20 px-6 py-4">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded flex items-center justify-center">
-                <img src='/assets/logo.png' className=''/>
-              </div>
-              <span className="text-xl font-bold">Pixazo</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-orange-500 px-4 py-2 rounded-md">
-              <Calendar className="w-4 h-4" />
-              <span className="text-sm font-medium">Sept 24-30, 2025</span>
-            </div>
-          </div>
-        </nav>
+        <span className="text-lg sm:text-xl font-bold">Pixazo</span>
+      </div>
+      <div className="flex items-center space-x-2 bg-orange-500 px-3 sm:px-4 py-2 rounded-md text-white">
+        <Calendar className="w-4 h-4" />
+        <span className="text-xs sm:text-sm font-medium">Sept 24–30, 2025</span>
+      </div>
+    </div>
+  </nav>
 
-        {/* Hero Content - Ahrefs Centered Layout */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 mt-4">
-          <div className="inline-flex items-center space-x-2 bg-orange-500 px-4 py-2 rounded-full mb-8">
-            <Star className="w-4 h-4" />
-            <span className="text-sm font-medium">Limited Time Offer</span>
-          </div>
+  {/* Hero Content */}
+  <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 mt-6 sm:mt-4">
+    <div className="inline-flex items-center space-x-2 bg-orange-500 px-3 sm:px-4 py-2 rounded-full mb-6 sm:mb-8">
+      <Star className="w-4 h-4" />
+      <span className="text-xs sm:text-sm font-medium">Limited Time Offer</span>
+    </div>
 
-          <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-6">
-            <span className="text-white">FREE Unlimited</span>
-            <br />
-            <span className="text-orange-500">Image & Video</span>
-            <br />
-            <span className="text-white">Creations</span>
-          </h1>
+    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
+      <span className="text-white">FREE Unlimited</span>
+      <br />
+      <span className="text-orange-500">Image & Video</span>
+      <br />
+      <span className="text-white">Creations</span>
+    </h1>
 
-          <p className="text-2xl text-gray-300 mb-8 font-light">
-            7 Days — Powered by Bytedance Models
-          </p>
+    <p className="text-lg sm:text-2xl text-gray-300 mb-6 sm:mb-8 font-light">
+      7 Days — Powered by Bytedance Models
+    </p>
 
-          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Be among the first 1000 users to unlock unlimited creativity with Pixazo.
-          </p>
+    <p className="text-base sm:text-lg text-gray-400 mb-10 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto">
+      Be among the first 1000 users to unlock unlimited creativity with Pixazo.
+    </p>
 
-          {/* Countdown Timer - Ahrefs Style */}
-          <div className="flex justify-center space-x-6 mb-12">
-            {Object.entries(timeLeft).map(([unit, value]) => (
-              <div key={unit} className="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-lg p-6 min-w-[120px]">
-                <div className="text-4xl font-bold text-orange-500">{value}</div>
-                <div className="text-sm text-gray-300 uppercase tracking-wide">{unit}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-10">
-            <button className="bg-orange-500 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-colors duration-300 flex items-center space-x-2 group">
-              <span>Get Early Access</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <div className="flex items-center space-x-2 text-gray-300">
-              <Users className="w-5 h-5" />
-              <span>847 users already registered</span>
-            </div>
-          </div>
+    {/* Countdown Timer */}
+    <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-6 mb-10 sm:mb-12">
+      {Object.entries(timeLeft).map(([unit, value]) => (
+        <div 
+          key={unit} 
+          className="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-lg p-4 sm:p-6 min-w-[100px] sm:min-w-[120px] text-center"
+        >
+          <div className="text-2xl sm:text-4xl font-bold text-orange-500">{value}</div>
+          <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wide">{unit}</div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 sm:mb-10">
+      <a 
+        href='#fillout' 
+        className="bg-orange-500 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-orange-600 transition-colors duration-300 flex items-center space-x-2 group"
+      >
+        <span>Get Early Access</span>
+        <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
+      </a>
+      <div className="flex items-center space-x-2 text-gray-300 text-sm sm:text-base">
+        <Users className="w-4 sm:w-5 h-4 sm:h-5" />
+        <span>847 users already registered</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Steps Section - Ahrefs Style Vertical Layout */}
       <section className="py-24 bg-gray-900">
@@ -221,12 +228,23 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
       </section>
 
       {/* Registration Form - Ahrefs Style */}
-      <section className="py-24 bg-black">
-        <div className="max-w-2xl mx-auto px-6">
+      <section className="py-24 bg-black" id='fillout'>
+        <div className='w-full h-full m-auto flex justify-center items-center'>
+          <div
+          style={{
+            width: 700,
+            height: 500,
+          }}
+        >
+          <FilloutStandardEmbed filloutId="gNrps6Z3Rhus"  />
+    </div>
+        </div>
+        {/* <div style={{width:'100%',height:'500px'}} data-fillout-id="gNrps6Z3Rhus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div> */}
+        {/* <div className="max-w-2xl mx-auto px-6">
           <div className="bg-gray-900 rounded-2xl p-12 border border-gray-800">
             <div className="text-center mb-10">
               <h2 className="text-4xl font-bold mb-4">Register Now for Early Access</h2>
-              <p className="text-lg text-gray-400">Get extra days + bonus free credits</p>
+              <p className="text-lg text-gray-400">Get e<div style="width:100%;height:500px;" data-fillout-id="gNrps6Z3Rhus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div><script src="https://server.fillout.com/embed/v1/"></script>xtra days + bonus free credits</p>
             </div>
 
             <form onSubmit={handleFormSubmit} className="space-y-6">
@@ -261,7 +279,7 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Models Showcase - Ahrefs Grid Style */}
@@ -330,11 +348,11 @@ Campaign: FREE Unlimited Image & Video Creations for 7 Days
             Join thousands of creators who are already transforming their ideas into stunning visuals and videos.
           </p>
 
-          <button className="bg-orange-500 text-white px-12 py-5 rounded-lg text-xl font-semibold hover:bg-orange-600 transition-colors duration-300 flex items-center justify-center space-x-3 mx-auto group">
+          <a href='https://playground.pixazo.ai/' target='_blank' className="w-100 bg-orange-500 text-white px-12 py-5 rounded-lg text-xl font-semibold hover:bg-orange-600 transition-colors duration-300 flex items-center justify-center space-x-3 mx-auto group">
             <Zap className="w-6 h-6" />
             <span>Start Creating Free</span>
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
       </section>
     </div>
