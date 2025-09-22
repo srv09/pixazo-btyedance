@@ -17,7 +17,7 @@ function App() {
 
   // Calculate time until September 24, 2025
   useEffect(() => {
-    const targetDate = new Date('2025-09-24T00:00:00Z').getTime();
+    const targetDate = new Date('2025-09-30T00:00:00Z').getTime();
     
     const timer = setInterval(() => {
       const now = new Date().getTime();
